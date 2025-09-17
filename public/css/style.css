@@ -78,13 +78,16 @@ ul li:hover a {
 
 h2 {
     color: var(--main);
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
+    align-items: center;
 }
 
 .no-list {
-    margin-bottom: 50px;
+   margin-left:440px;
+   align-items: center;
+   text-align: center;
 }
 .list {
     display: grid;
@@ -114,11 +117,14 @@ h2 {
 }
 
 footer {
-    border-top: 1px solid var(--lighter);
-    padding: 20px 0 !important;
-    text-align: center;
-    font-size: 16px;
-    color: var(--main);
+  grid-column: 1 / -1;   /* ocupa todas as colunas se estiver dentro de um grid */
+  display: block;
+  border-top: 1px solid var(--lighter);
+  padding: 20px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: var(--main);
+  margin-top: 30px;      /* dá espaço acima pra separar */
 }
 
 @media (max-width: 900px) {
