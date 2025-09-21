@@ -1,3 +1,15 @@
+export const caracteristicas = (req: Request, res: Response) => {
+    res.render('pages/caracteristicas');
+};
+export const animalDetail = (req: Request, res: Response) => {
+    const id = parseInt(req.params.id ?? '');
+    const allPets = pet.getAll();
+    const animal = allPets[id];
+    if (!animal) {
+        return res.status(404).render('pages/animalDetail', { notFound: true });
+    }
+    res.render('pages/animalDetail', { animal });
+};
 import { Request, Response } from 'express';
 
 import { pet } from '../models/pet';
